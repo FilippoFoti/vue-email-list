@@ -21,20 +21,33 @@
 <!-- VUE-JS -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
 
+<!-- AXIOS-JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.5/axios.min.js" integrity="sha512-nnNHpffPSgINrsR8ZAIgFUIMexORL5tPwsfktOTxVYSv+AUAILuFYWES8IHl+hhIhpFGlKvWFiz9ZEusrPcSBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <body>
 <!-- HEADER -->
+    <header>
+        <img src="img/logo.svg" alt="Logo">
+    </header>
 <!-- /HEADER -->
 
 <!-- MAIN -->
     <main>
+        <h1>Genera 10 Email random con <span>Boolean</span></h1>
         <div id="app">
-            
+            <ul>
+                <li v-for="mail in email">{{ mail }}</li>
+            </ul>
+            <button @click="emailGenerator">Genera Emails </button>
         </div>
     </main>
 <!-- /MAIN -->
 
 <!-- FOOTER -->
+    <footer>
+        <h2>Axios by <span>Boolean</span> ©</h2>
+    </footer>
 <!-- /FOOTER -->
 
 <!-- SCRIPT-JS -->
